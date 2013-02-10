@@ -12,6 +12,7 @@ Done:
 
 To do:
 
+* Convert text of type 'trac:123' to link to Trac ticket.
 * Update ticket status when updating pull request comments.
 
 
