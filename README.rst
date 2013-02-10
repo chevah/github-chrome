@@ -20,6 +20,13 @@ Nice to have:
 * Search bar: chevah #245 go to ticket
 
 
+Usage
+-----
+
+* Install as unpacked extension.
+* There is an option page to turn of features and case the extension go wild.
+
+
 Thanks
 ------
 
