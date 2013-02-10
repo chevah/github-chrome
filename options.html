@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="chevah_github" ng-csp>
+<head>
+  <meta charset="utf-8" />
+  <title>Chrome Bootstrap</title>
+  <link rel="stylesheet" type="text/css" href="css/chrome-bootstrap.css" />
+ 
+</head>
+<body class="frame">
+  <div class="navigation" ng-controller="GenericCtrl">
+    
+    <ul class="menu">
+      <li class="start">
+        <h1><a href="#/start">Chevah</a></h1>
+      </li>
+      <li class="pull">
+        <a href="#/pull">Pull requests</a>
+      </li>
+      <li class="templates">
+        <a href="#/templates">Templates</a>
+      </li>
+      <li>
+        <button ng-click='saveConfiguration(configuration)'>Save</button>
+      </li>
+      <li>
+        <button ng-click='resetConfiguration()'>Reset to default</button>
+      </li>
+    </ul>
+
+  </div>
+  <div class="mainview view" ng-view>
+  </div>
+
+
+</body>
+<script src="js/zepto.min.js" type="text/javascript"></script>
+<script src="js/angular.min.js" type="text/javascript"></script>
+<script src="js/configuration.js" type="text/javascript"></script>
+<script src="js/options.js" type="text/javascript"></script>
+</html>

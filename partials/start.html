@@ -1,0 +1,36 @@
+<div id="start">
+  <header>
+    <h1>Chevah Pluging for Chrome</h1>
+  </header>
+  <div class="content">
+
+    <h2>General configuration</h2>
+    <div>
+      Trac Base URL:
+      <input type="text" size="50" ng-model="configuration.trac_url" />
+      (no trailing spaces)
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="configuration.links_enabled">
+        <span>Expand pull request links to Trac tickets.</span>
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="configuration.review_template_enabled">
+        <span>Auto fill review request body with template text.</span>
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="configuration.review_title_enabled">
+        <span>Append ticket ID to review title.</span>
+      </label>
+    </div>
+
+
+  </div>
+</div>

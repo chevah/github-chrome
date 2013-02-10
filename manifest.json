@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chevah GitHub Review Workflow",
+  "description": "Various helpers while doing reviews from GitHub.",
+  "version": "0.1.0",
+
+  "options_page": "options.html",
+
+  "permissions": [
+    "https://github.com/",
+    "storage"
+   ],
+
+
+
+  "icons": {
+    "16": "img/chevah-16.jpg",
+    "48": "img/chevah-48.jpg",
+    "128": "img/chevah-128.jpg"
+   },
+
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/chevah/*/pull/*"],
+      "css": [],
+      "js": [
+        "js/zepto.min.js",
+        "js/configuration.js",
+        "js/trac.js",
+        "js/pull.js"
+        ]
+    }
+  ],
+
+  "offline_enabled": false
+
+}
