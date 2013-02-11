@@ -1,22 +1,27 @@
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Chevah Test with Mocha</title>
-  <link rel="stylesheet" href="css/libs/mocha.css" />
-</head>
-<body>
-  <div id="mocha"></div>
+  <head>
+    <meta charset="utf-8">
+    <title>Chevah Test with Mocha from PhantomJS or Browser</title>
+    <link rel="stylesheet" href="css/libs/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+  </body>
   <script src="js/libs/zepto.min.js"></script>
-  <script src="js/libs/chai.js"></script>
   <script src="js/libs/mocha.js"></script>
+  <script src="js/libs/chai.js"></script>
   <script>
-    //mocha.setup({ignoreLeaks: true});
-    mocha.setup('tdd');
+    mocha.ui('tdd');
+    mocha.reporter('html');
+    var assert = chai.assert;
   </script>
   <script src="js/trac.js"></script>
   <script src="js/tests/test_trac.js"></script>
   <script>
-    mocha.run();
+    if (window.mochaPhantomJS) {
+      mochaPhantomJS.run();
+    } else {
+      mocha.run();
+    }
   </script>
-</body>
 </html>
