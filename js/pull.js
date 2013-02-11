@@ -21,9 +21,9 @@ var updateTracLinks = function(){
   }
 
   $('a.issue-link').each(function(index){
-    ticket = getTracTicket($(this).attr('title'));
+    ticket = trac.getTracTicket($(this).attr('title'));
     if (ticket) {
-      $(this).after(generateTracLink(ticket, configuration));
+      $(this).after(trac.generateTracLink(ticket, configuration));
     }
   });
 
@@ -41,7 +41,7 @@ var fillNewPullBody = function(){
 
   pull_request_body = $('textarea#pull_request_body')[0];
   /* No pull reqest on the page. */
-  if (pull_request_body === 'undefined') {
+  if (typeof pull_request_body === 'undefined') {
     return;
   }
 
@@ -68,11 +68,11 @@ var fillNewPullTitle = function(){
   pull_request_title = $('input#pull_request_title')[0];
 
   /* No pull reqest on the page. */
-  if (pull_request_title === 'undefined') {
+  if (typeof pull_request_title === 'undefined') {
     return;
   }
 
-  ticket_id = getTracTicketFromPullURL(window.location.pathname);
+  ticket_id = trac.getTracTicketFromPullURL(window.location.pathname);
 
   // Ticket id not found.
   if (!ticket_id) {
