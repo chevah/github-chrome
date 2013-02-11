@@ -5,10 +5,11 @@
  * bdd:  describe(), it(), before(), after(), beforeEach(), and afterEach():
  */
 
-// Line comented for executing from node-js.
-//var trac = require('../trac.js');
-//var assert = require('chai').assert;
-
+// Support for working from Mocha / Node.
+if (typeof assert !== 'function') {
+    var trac = require('../trac.js');
+    var assert = require('chai').assert;
+}
 
 /*
  RequireJS wrapper.
