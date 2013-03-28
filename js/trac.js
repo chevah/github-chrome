@@ -32,15 +32,20 @@ define([], function() {
     }
   };
 
-
+  /*
+   * /user/repo/pull/new/chevah:master...897-failing-tests-on-windows"
+   * /user/repo/pull/new/chevah:1080-win-conf...1006-ftp-timeout
+   * /user/repo/pull/new/1006-ftp-timeout
+   *
+   * http://gskinner.com/RegExr/?33o30
+   */
   exports.getTracTicketFromPullURL = function(content) {
-    // "/chevah/empirical/pull/new/chevah:master...897-failing-tests-on-windows"
-    var ticket_parser = /.*\.\.\.(\d+)-.*/;
+    var ticket_parser = /.*(\.\.\.|\/)(\d+)-.*/;
     var match = ticket_parser.exec(content);
     if (!match) {
       return null;
     } else {
-      return match[1];
+      return match[2];
     }
   };
 

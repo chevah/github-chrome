@@ -24,8 +24,18 @@ Nice to have:
 Usage
 -----
 
-* Install as unpacked extension.
-* There is an option page to turn of features and case the extension go wild.
+* Install as unpacked extension:
+
+  * Tools -> Extensions
+  * Enable `Developer mode`
+  * Click the new `Load unpacked extension...`
+  * Choose folder and then 'Open'
+
+* There is an option page for the extension:
+
+  * Update Trac url.
+  * Update review text.
+  * To turn of features and case the extension go wild.
 
 
 Thanks

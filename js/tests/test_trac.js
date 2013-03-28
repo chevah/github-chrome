@@ -48,9 +48,14 @@ suite('Trac Helpers', function(){
             '/chevah/empirical/pull/new/chevah:master...branch-name'));
     });
 
-    test('Returns ticket id as string from pull url.', function(){
+    test('Get ticket id from pull url to another branch.', function(){
         assert.strictEqual('123', trac.getTracTicketFromPullURL(
-            '/chevah/empirical/pull/new/chevah:master...123-branch-name'));
+            '/chevah/empirical/pull/new/chevah:999-other...123-branch-name'));
+    });
+
+    test('Get ticket id as string from default pull url .', function(){
+        assert.strictEqual('123', trac.getTracTicketFromPullURL(
+            '/chevah/empirical/pull/new/123-branch-name'));
     });
 
   });
