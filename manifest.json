@@ -22,7 +22,9 @@
 
   "content_scripts": [
     {
-      "matches": ["https://github.com/chevah/*/pull/*"],
+      "matches": [
+        "https://github.com/chevah/*/compare/*"
+        ],
       "css": [],
       "js": [
         "js/libs/zepto.min.js",

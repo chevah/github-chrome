@@ -40,7 +40,7 @@ var fillNewPullBody = function(){
   }
 
   pull_request_body = $('textarea#pull_request_body')[0];
-  /* No pull reqest on the page. */
+  /* No pull request on the page. */
   if (typeof pull_request_body === 'undefined') {
     return;
   }
@@ -49,7 +49,7 @@ var fillNewPullBody = function(){
   if ($.trim($(pull_request_body).text()) !== "") {
     return;
   }
-  
+
   $(pull_request_body).text(configuration.review_template_body);
 
 };
