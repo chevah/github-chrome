@@ -1,5 +1,5 @@
-chevah-github-chrome
-====================
+DEPRECATED - chevah-github-chrome
+=================================
 
 Chrome extension for using GitHub while working on Chevah project.
 
